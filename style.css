@@ -1,0 +1,225 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6; /* Assure une bonne lisibilité */
+    color: #333; /* Couleur sombre mais pas totalement noire pour le confort */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #d2f0fa;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+    margin: 0;
+    color: #5a6f77;
+}
+nav {
+    margin-top: 15px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #8DB0BB;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+nav ul li a:hover {
+    background-color: #8DB0BB;
+    color: white;
+    border-radius: 5px;
+}
+.hero {
+    background-image: url('https://example.com/fleurs.jpg'); /* Remplacez par l'URL de votre image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+.hero h2 {
+    font-size: 3em;
+    margin: 0;
+}
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+.products {
+    display: flex;
+    /* flex-direction: column; 
+    align-items: center;  */
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    display: inline-block; /* Adapte la taille à son contenu */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 400px; /* Définit une largeur fixe pour toutes les images */
+    height: auto; /* Maintient les proportions */
+    object-fit: cover; /* Coupe l'image si nécessaire pour remplir l'espace */
+}
+
+@media (max-width: 768px) {
+    .product-card h3 {
+        display: none; /* Cache le texte h3 sur les petits écrans */
+    }
+
+    .product-card img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Affiche l'image entière */
+    }
+}
+
+.product-card h3 {
+    margin: 15px 0 10px;
+}
+.product-card p {
+    color: #777;
+}
+
+footer {
+    background-color: #d2f0fa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #8DB0BB;
+    border-top: 1px solid #ddd;
+}
+
+nav ul li a.active {
+    color: #ffffff;
+    background-color: #8DB0BB;
+    border-radius: 5px;
+}
+
+.content{
+    margin: 0 3% 3% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.horaires{
+    display: flex;
+    justify-content: center;
+    /* margin: 0 3% 3% 3%; */
+}
+
+
+/* Contacts page */
+
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: #5a5a5a;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #5a5a5a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #444;
+}
+
+/* Onglet exemple */
+
+.products-expo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card-expo {
+    display: inline-block; /* Adapte la taille à son contenu */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card-expo img {
+    width: 200px; /* Définit une largeur fixe pour toutes les images */
+    height: auto; /* Maintient les proportions */
+    object-fit: cover; /* Coupe l'image si nécessaire pour remplir l'espace */
+}
+
+@media (max-width: 768px) {
+    .product-card-expo h3 {
+        display: none; /* Cache le texte h3 sur les petits écrans */
+    }
+
+    .product-card-expo img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Affiche l'image entière */
+    }
+}
+
+.product-card-expo h3 {
+    margin: 15px 0 10px;
+}
+.product-card-expo p {
+    color: #777;
+}
