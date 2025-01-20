@@ -169,7 +169,7 @@ nav ul li a.active {
 
 .carousel-container {
     position: relative;
-    width: 100%; 
+    width: 45%; 
     margin: 0 auto;
     overflow: hidden; 
 }
@@ -178,28 +178,40 @@ nav ul li a.active {
     display: flex;
     transition: transform 0.5s ease;
     position: relative;
+    align-items: center;
 }
 
 .product-card-expo {
-    flex: 0 0 80%; /* Chaque article occupe 80% de la largeur du carrousel */
+    flex: 0 0 50%; /* Chaque article occupe 50% de la largeur du carrousel */
     opacity: 1;
     transition: opacity 0.5s ease; /* Transition pour l'opacité */
-    transform: scale(0.9); /* Réduit légèrement la taille des éléments adjacents */
     transition: transform 0.5s ease; /* Transition de la transformation */
-    /* text-align: center; */
+    position: relative; /* Nécessaire pour le positionnement des éléments suivants */
 }
 
 /* Réduire l'opacité et appliquer une transformation pour les éléments voisins */
 .product-card-expo.previous,
 .product-card-expo.next {
-    opacity: 0.5; /* Réduit l'opacité des éléments adjacents */
-    transform: scale(0.8); /* Réduit encore plus la taille des éléments voisins */
+    opacity: 0.12; /* Réduit l'opacité des éléments adjacents */
+}
+
+/* Création du dégradé plus accentué pour l'élément suivant */
+.product-card-expo.next::after {
+    content: ''; /* Nécessaire pour le pseudo-élément */
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%; /* Applique un dégradé à la moitié droite */
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.2)); /* Réduit la transparence pour un dégradé plus marqué */
+    pointer-events: none; /* S'assurer que cela ne gêne pas l'interaction avec l'élément */
+    z-index: 2; /* S'assurer que le dégradé reste au-dessus de l'élément */
 }
 
 /* Optionnel: Vous pouvez également ajouter un effet d'ombre pour mieux distinguer les éléments */
 .product-card-expo.previous,
 .product-card-expo.next {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre légèrement plus marquée */
 }
 
 .carousel-button {
@@ -222,47 +234,12 @@ nav ul li a.active {
     right: 10px;
 }
 
-
-
-
-
-/* .carousel {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.product-card-expo {
-    min-width: 100%;
-    transition: 0.3s ease-in-out;
-    text-align: center;
-}
-
 .product-card-expo img {
-    width: 100%;
+    max-width: 500px;
+    width: 80%;
     height: auto;
     object-fit: cover;
 }
 
-.carousel-button {
-    position: absolute;
-    top: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    font-size: 24px;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-}
 
-.prev {
-    left: 10px;
-}
 
-.next {
-    right: 10px;
-}
-
-.carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-} */

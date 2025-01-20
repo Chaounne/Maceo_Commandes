@@ -26,10 +26,11 @@ function moveSlide(direction) {
 
     slides[prevIndex].classList.add('previous');
     slides[nextIndex].classList.add('next');
+    slides[nextIndex+1].classList.add('next');
 
     // Déplacer le carrousel
     const carousel = document.querySelector('.carousel');
     // L'index doit être multiplié par le pourcentage de chaque élément (80%)
-    carousel.style.transform = `translateX(-${currentIndex * 80}%)`;
+    carousel.style.transform = `translateX(-${currentIndex * 50}%)`;
 }
 
