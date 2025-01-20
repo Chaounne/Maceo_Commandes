@@ -1,4 +1,4 @@
-let currentIndex = 0;
+let currentIndex = 1;
 
 function moveSlide(direction) {
     const slides = document.querySelectorAll('.product-card-expo');
@@ -16,21 +16,22 @@ function moveSlide(direction) {
 
     // Réinitialiser toutes les cartes à une opacité normale
     slides.forEach(slide => {
-        slide.classList.remove('previous', 'next');
+        slide.classList.remove('previous', 'next', 'active');
         slide.style.transform = 'scale(1)'; // Réinitialiser la taille
     });
 
-    // Marquer l'élément précédent et suivant
+    // Marquer l'élément actuel, précédent et suivant
     const prevIndex = (currentIndex - 1 + totalSlides) % totalSlides;
     const nextIndex = (currentIndex + 1) % totalSlides;
 
+    // Marquer les éléments adjacents
     slides[prevIndex].classList.add('previous');
     slides[nextIndex].classList.add('next');
-    slides[nextIndex+1].classList.add('next');
+
+    // Marquer l'élément du milieu
+    slides[currentIndex].classList.add('active');
 
     // Déplacer le carrousel
     const carousel = document.querySelector('.carousel');
-    // L'index doit être multiplié par le pourcentage de chaque élément (80%)
-    carousel.style.transform = `translateX(-${currentIndex * 50}%)`;
+    carousel.style.transform = `translateX(-${currentIndex * 33.33}%)`;
 }
-
