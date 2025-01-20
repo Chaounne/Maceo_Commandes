@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6; /* Assure une bonne lisibilité */
-    color: #333; /* Couleur sombre mais pas totalement noire pour le confort */
+    line-height: 1.6; 
+    color: #333; 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -42,22 +42,7 @@ nav ul li a:hover {
     color: white;
     border-radius: 5px;
 }
-.hero {
-    background-image: url('https://example.com/fleurs.jpg'); /* Remplacez par l'URL de votre image */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
-.hero h2 {
-    font-size: 3em;
-    margin: 0;
-}
-.hero p {
-    font-size: 1.2em;
-    margin-top: 10px;
-}
+
 .products {
     display: flex;
     /* flex-direction: column; 
@@ -68,7 +53,7 @@ nav ul li a:hover {
 }
 
 .product-card {
-    display: inline-block; /* Adapte la taille à son contenu */
+    display: inline-block; 
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
@@ -78,7 +63,7 @@ nav ul li a:hover {
 
 .product-card img {
     width: 400px; /* Définit une largeur fixe pour toutes les images */
-    height: auto; /* Maintient les proportions */
+    height: auto; 
     object-fit: cover; /* Coupe l'image si nécessaire pour remplir l'espace */
 }
 
@@ -126,7 +111,6 @@ nav ul li a.active {
 .horaires{
     display: flex;
     justify-content: center;
-    /* margin: 0 3% 3% 3%; */
 }
 
 
@@ -200,20 +184,20 @@ nav ul li a.active {
 }
 
 .product-card-expo img {
-    width: 200px; /* Définit une largeur fixe pour toutes les images */
-    height: auto; /* Maintient les proportions */
-    object-fit: cover; /* Coupe l'image si nécessaire pour remplir l'espace */
+    width: 200px; 
+    height: auto; 
+    object-fit: cover;
 }
 
 @media (max-width: 768px) {
     .product-card-expo h3 {
-        display: none; /* Cache le texte h3 sur les petits écrans */
+        display: none; 
     }
 
     .product-card-expo img {
         width: 100%;
         height: auto;
-        object-fit: contain; /* Affiche l'image entière */
+        object-fit: contain; 
     }
 }
 
