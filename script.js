@@ -32,6 +32,8 @@ function moveSlide(direction) {
     slides[currentIndex].classList.add('active');
 
     // Déplacer le carrousel
-    const carousel = document.querySelector('.carousel');
-    carousel.style.transform = `translateX(-${currentIndex * 33.33}%)`;
+    if(currentIndex%3==0){
+        const carousel = document.querySelector('.carousel');
+        carousel.style.transform = `translateX(-${currentIndex * 33.33}%)`;
+    }
 }
